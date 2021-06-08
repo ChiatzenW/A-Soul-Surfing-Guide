@@ -215,22 +215,29 @@ git push origin master
 
 ## 页面维护
 
-请尽量先 fork， 在本地处理完成后，提交 PR 到仓库。
-
 :::caution
 
-提交 commit 之前先运行测试，确认测试成功后再提交 commit，这是一个好习惯。
+请尽量先 fork， 在本地处理完成后，提交 PR 到仓库。
 
 :::
 
-### 依赖安装
+:::tip
+
+提交 commit 之前先运行测试，确认测试成功后再提交 commit，这是一个好习惯。
+这样就不用反复提交再修复。
+
+:::
+
+你可以选择 [本地构建](#本地构建)，或者使用 [docker](#docker-构建) 构建：
+
+### 本地构建
 
 首先需要安装好 nodejs， npm， yarn。
 [点击到 Node.js 下载页](https://nodejs.org/en/download/)。
 
 > 也可以使用 docker 进行维护，使用命令： 
 > `docker run --name asoul-wiki-page -it -p 3000:3000 node:alpine ash`
-> 进入 docker 构建。
+> 进入 docker 构建。。
 
 使用 [git](https://git-scm.com/book/zh/v2) 拉取仓库之后，执行命令下载依赖：
 
@@ -246,7 +253,7 @@ npx docusaurus --version
 
 如果正确安装应该会有版本号显示。
 
-### 如何预览
+#### 如何预览
 
 ```bash
 npx docusaurus start
@@ -258,7 +265,7 @@ npx docusaurus start
 npx docusaurus start --port 11451 --host 0.0.0.0
 ```
 
-### 如何生成静态页面
+#### 如何生成静态页面
 
 ```bash
 npx docusaurus build
@@ -271,6 +278,93 @@ npm run serve
 ```
 
 静态页面会生成在 `site` 文件夹里。
+
+### Docker 构建
+
+:::note
+
+此处使用的是 node:alpine 镜像，在本文撰写时详细版本号为 node:16.3-alpine。
+
+:::
+
+如果想要快速测试及构建，你可以尝试使用 [docker](https://docker.com)。
+
+根据官网的指引下载安装好 docker 之后， 使用下面的命令拉取 node 镜像：
+
+```console
+docker pull node:alpine
+```
+
+然后运行 node 镜像：
+
+```console
+docker run --name asoul-guide-book -it -p 3000:3000 node:alpine ash
+```
+
+> 命令解释： 
+> 
+> - `docker`: 运行 docker 的 cli 软件
+> - `run`: 传递 run 参数，让 docker 的 cli 启动镜像
+> - `--name asoul-guide-book` : 给当前我们运行的这个实例命名为 `asoul-guide-book`
+> - `-it`: 让这个镜像给我们提供一个可以交互的终端
+> - `-p 3000:3000`： 把我们宿主机的 3000 端口绑定到内部的 3000 端口，你可以想象
+一条隧道，当我们访问本地 3000 端口时，会通过这条管道把数据传输到镜像里面的 3000
+端口。
+> - `node:alpine`： 我们要用到的镜像
+> - `ash`： 启动镜像时打开 `ash` 这个程序。`ash` 是一个终端程序，通过他才能进行
+下面的其他操作。
+
+进入 docker 之后，如果没有错误，你应该会看到下面这样的提示符：
+
+```console
+/#
+```
+
+然后输入命令：
+
+```console
+apk add git python3 build-base
+```
+
+等东西安装好之后，使用 git 把我们的仓库源码拉取下来并进入文件夹：
+
+```console
+git clone https://github.com/A-Soul-Guide/A-Soul-Surfing-Guide
+
+cd A-Soul-Surfing-Guide
+```
+
+然后我们安装 Node.js 依赖：
+
+```console
+npm install
+```
+
+安装好之后就可以继续像上述的 [本地构建](#本地构建) 章节中继续构建操作了。
+
+如果你想操作本地的目录的话，在启动镜像时加入一个新的参数：
+
+```console
+docker run \
+    --name asoul-guide-book \
+    -it \ 
+    -p 3000:3000 \ 
+    -v $PWD:/data \ 
+    node:alpine ash
+```
+
+这里的 $PWD 可以获取你的当前所在目录，你也可以自己写进去，但是
+必须是绝对路径。docker 会把冒号左边的路径挂在到镜像里的 /data
+文件夹里，你对 /data 的操作也会同步到宿主机的文件夹里。
+
+然后运行：
+
+```
+apk add python3 build-base
+```
+
+不需要再拉取仓库所以不用下载 git 了。
+
 </TabItem>
 </Tabs>
 
