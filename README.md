@@ -11,7 +11,7 @@ A-Soul 评论区冲浪指南是一个对 A-Soul 相关梗解释的手册。
 ## 如何贡献
 
 如果你对这本梗指南有兴趣，而且想要尝试编辑，
-请先阅读 [A-Soul 评论区冲浪指北](./docs/A-Soul_Wiki_Edit_Guide.md)
+请先阅读 [A-Soul 评论区冲浪指北](https://wiki.asoul.org/A-Soul_Wiki_Edit_Guide)
 了解编辑要求和编辑依赖。
 
 对要求有所了解后，可以依照如下步骤进行贡献：
