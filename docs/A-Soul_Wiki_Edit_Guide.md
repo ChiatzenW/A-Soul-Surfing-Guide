@@ -48,7 +48,7 @@ Markdown 编辑器如何选择我们没有限制，你可以任意选取，如�
 [typora](https://typora.io)。 但是本人推荐使用 VSCode 加上预览插件，
 可以方便的进行版本管理，也可以对文本样式的实现有清晰的了解。
 
-2. 请使用如下格式进行百科内容编辑
+2. 请使用如下格式进行百科内容编辑(请注意换行是两次回车)
 
 ```markdown
 # 梗名字 （比如“含金量”）
@@ -198,6 +198,17 @@ keywords:
 
 ## 来源
 正文...
+```
+
+### 提交修改
+
+修改完之后你需要使用 git 把修改存好并提交到你自己的仓库，然后在 GitHub 
+发起 Pull Request 请求，我们会尽快检查你的文字并合并到网站中。
+
+```console
+git add ./docs/口水黄豆.md
+git commit -m "更新： 新增口水黄豆条目"
+git push origin master
 ```
 </TabItem>
 <TabItem value="pages">
