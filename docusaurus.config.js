@@ -64,7 +64,7 @@ module.exports = {
 			{
 				hashed: true,
 				language: ["en", "zh"],
-				docsRouteBasePath: ["/", "/ACG", "/未分类"],
+				indexPages: true,
 				indexBlog: false,
 				highlightSearchTermsOnTargetPage: true,
 			},
