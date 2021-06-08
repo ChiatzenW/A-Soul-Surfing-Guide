@@ -1,7 +1,7 @@
 # A-Soul 评论区冲浪指南
 
 [![网站状态](https://img.shields.io/website?down_color=red&down_message=%E7%BD%91%E7%AB%99%E6%97%A0%E6%B3%95%E9%93%BE%E6%8E%A5&style=plastic&up_color=green&up_message=%E7%BD%91%E7%AB%99%E9%93%BE%E6%8E%A5&url=https%3A%2F%2Fwiki.asoul.org)](https://wiki.asoul.org)
-![当前构建状态](https://github.com/sakifore/ASoul_meme_explanation/actions/workflows/gen_toc.yml/badge.svg)
+![依赖](https://img.shields.io/node/v/@docusaurus/init)
 ![许可](https://img.shields.io/github/license/sakifore/ASoul_meme_explanation)
 
 A-Soul 评论区冲浪指南是一个对 A-Soul 相关梗解释的手册。
