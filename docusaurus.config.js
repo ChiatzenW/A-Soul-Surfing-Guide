@@ -29,11 +29,44 @@ module.exports = {
 			style: "dark",
 			links: [
 				{
-					title: "Docs",
+					title: "成员链接",
 					items: [
 						{
-							label: "A-Soul 评论区冲浪指南",
-							to: "/",
+							label: "嘉然今天吃什么",
+							to: "https://space.bilibili.com/672328094",
+						},
+						{
+							label: "乃琳Queen",
+							to: "https://space.bilibili.com/672342685",
+						},
+						{
+							label: "贝拉kira",
+							to: "https://space.bilibili.com/672353429",
+						},
+						{
+							label: "向晚大魔王",
+							to: "https://space.bilibili.com/672346917",
+						},
+						{
+							label: "珈乐Carol",
+							to: "https://space.bilibili.com/351609538",
+						},
+					],
+				},
+				{
+					title: "Reference",
+					items: [
+						{
+							label: "A-Soul_Official",
+							to: "https://space.bilibili.com/703007996/dynamic",
+						},
+						{
+							label: "Docusaurus",
+							to: "https://docusaurus.io",
+						},
+						{
+							label: "Source Code",
+							to: "https://github.com/A-Soul-Guide/A-Soul-Surfing-Guide",
 						},
 					],
 				},
