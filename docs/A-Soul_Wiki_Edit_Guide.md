@@ -102,7 +102,7 @@ git commit -m "更新(引用补充): 补充了向晚资料页的引用文章地�
 
 可以参考下列网站来获得更详细描述：
 
-- [Udacity Git Commit Message Style Guide](udacity.github.io/git-styleguide/)
+- [Udacity Git Commit Message Style Guide](https://udacity.github.io/git-styleguide/)
 - [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)
 
 5. **（推荐，可选）** 一些编辑建议
