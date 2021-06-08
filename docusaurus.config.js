@@ -60,13 +60,13 @@ module.exports = {
 
 	plugins: [
 		[
-			require.resolve("@easyops-cn/docusaurus-search-local"),
+			"@easyops-cn/docusaurus-search-local",
 			{
 				hashed: true,
 				language: ["en", "zh"],
-				docsRouteBasePath: "/",
+				docsRouteBasePath: ["/", "/ACG", "/未分类"],
 				indexBlog: false,
-				docsDir: "/",
+				highlightSearchTermsOnTargetPage: true,
 			},
 		],
 	],
