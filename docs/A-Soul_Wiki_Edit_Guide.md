@@ -6,11 +6,6 @@ sidebar_position: 99
 为了防止指南被严重破坏，以及帮助对静态页面没有编辑经验的新成员，我制定了
 这一份 _A-Soul 上网冲浪指北_ 来规范指南的编辑。
 
-## 目录
-
-- [我想要写新条目！！](#内容维护)
-- [我想要维护网页！！](#页面维护)
-
 ## 你需要什么
 
 由于我们的内容审核和版本管理依赖 [git](https://git-scm.com/book/zh/v2), 
@@ -18,6 +13,19 @@ sidebar_position: 99
 需要了解 [git](https://git-scm.com/book/zh/v2) 和
 [GitHub Pull Request](https://docs.github.com/cn/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 的使用方法。
+
+## 你想做什么
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="entry"
+  values={[
+    {label: '我想写新条目！', value: 'entry'},
+    {label: '我想维护网页！', value: 'pages'},
+  ]}>
+  <TabItem value="entry">
 
 ## 内容维护
 
@@ -190,8 +198,8 @@ keywords:
 ## 来源
 正文...
 ```
-
----
+</TabItem>
+<TabItem value="pages">
 
 ## 页面维护
 
@@ -245,3 +253,6 @@ npx docusaurus build
 ```
 
 静态页面会生成在 `site` 文件夹里。
+</TabItem>
+</Tabs>;
+
