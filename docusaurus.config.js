@@ -32,7 +32,7 @@ module.exports = {
 					title: "Docs",
 					items: [
 						{
-							label: "Tutorial",
+							label: "A-Soul 评论区冲浪指南",
 							to: "/",
 						},
 					],
