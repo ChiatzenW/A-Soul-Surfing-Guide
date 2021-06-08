@@ -14,5 +14,8 @@ slug: /
 
 ## 我也想写！
 
-你可以查看我的仓库: [Sakifore/A-Soul-Surfing-Guide](https://github.com/sakifore/A-Soul-Surfing-Guide)
+首先非常感谢你的热情！ 你可以先查看这篇 [A-Soul 评论区冲浪编辑指北](./A-Soul_Wiki_Edit_Guide.md)，
+对编辑工作流有所了解之后，再查看 
+[README](https://github.com/A-Soul-Guide/A-Soul-Surfing-Guide/blob/master/README.md)
+了解具体如何贡献。
 
