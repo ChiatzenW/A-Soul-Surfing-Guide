@@ -1,12 +1,12 @@
 ---
 sidebar_position: 99
 ---
-# A-Soul 上网冲浪指北
+# A-Soul 上网冲浪编辑指北
 
 为了防止指南被严重破坏，以及帮助对静态页面没有编辑经验的新成员，我制定了
 这一份 _A-Soul 上网冲浪指北_ 来规范指南的编辑。
 
-## 你需要什么
+## 在你贡献之前...
 
 由于我们的内容审核和版本管理依赖 [git](https://git-scm.com/book/zh/v2), 
 如果你对我们的指南编辑有兴趣，不论你是想编辑内容还是维护网站，你都
@@ -252,7 +252,13 @@ npx docusaurus start --port 11451 --host 0.0.0.0
 npx docusaurus build
 ```
 
+可以运行命令检查渲染后的页面：
+
+```bash
+npm run serve
+```
+
 静态页面会生成在 `site` 文件夹里。
 </TabItem>
-</Tabs>;
+</Tabs>
 
