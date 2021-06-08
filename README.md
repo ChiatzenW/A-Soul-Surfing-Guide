@@ -1,6 +1,6 @@
 # A-Soul 评论区冲浪指南
 
-[![网站状态](https://img.shields.io/website?down_color=red&down_message=%E7%BD%91%E7%AB%99%E6%97%A0%E6%B3%95%E9%93%BE%E6%8E%A5&style=plastic&up_color=green&up_message=%E7%BD%91%E7%AB%99%E9%93%BE%E6%8E%A5&url=https%3A%2F%2Fwiki.asoul.org)](https://wiki.asoul.org)
+[![网站状态](https://img.shields.io/website?down_color=red&down_message=%E5%BD%93%E5%89%8D%E7%A6%BB%E7%BA%BF&label=%E5%86%B2%E6%B5%AA%E6%8C%87%E5%8D%97%E7%BD%91%E7%AB%99%E7%8A%B6%E6%80%81&logo=GitBook&logoColor=lightgrey&up_color=brightgreen&up_message=%E5%BD%93%E5%89%8D%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fwiki.asoul.org)](https://wiki.asoul.org)
 ![依赖](https://img.shields.io/node/v/@docusaurus/init)
 ![许可](https://img.shields.io/github/license/sakifore/ASoul_meme_explanation)
 
