@@ -44,8 +44,9 @@ import TabItem from '@theme/TabItem';
 如对 Markdown 语法不熟悉，可以查看这篇文章： 
 [Markdown语法教程](https://markdown.com.cn/intro.html#markdown-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
 
-Markdown 编辑器非常自由，你可以任意选取，但是本人推荐使用 VSCode 加上预览插件，
-可以方便的进行版本管理，也可以对自己如何实现的文本格式有清晰的了解。
+Markdown 编辑器如何选择我们没有限制，你可以任意选取，如果你是第一次使用你可以尝试 
+[typora](https://typora.io)。 但是本人推荐使用 VSCode 加上预览插件，
+可以方便的进行版本管理，也可以对文本样式的实现有清晰的了解。
 
 2. 请使用如下格式进行百科内容编辑
 
