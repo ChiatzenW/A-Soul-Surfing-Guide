@@ -37,9 +37,7 @@ git checkout -b {{NEW_CHANGE}}
 git checkout -b new-artical
 ```
 
-然后对 `asoul.md` 文件进行编辑， 编辑时请尽量依照下章梗百科格式的要求。
-
-同时请**注意**几点：
+然后再对文件进行编辑， 编辑时请同时请**注意**几点：
 
 - 请不要编辑 `README.md`。
 - 如果你是内容编辑人员，请在 `./docs` 文件夹内工作，不要编辑其他文件
