@@ -21,7 +21,7 @@ module.exports = {
 					type: "doc",
 					docId: "index",
 					position: "left",
-					label: "Tutorial",
+					label: "首页",
 				},
 			],
 		},
