@@ -57,4 +57,17 @@ module.exports = {
 			},
 		],
 	],
+
+	plugins: [
+		[
+			require.resolve("@easyops-cn/docusaurus-search-local"),
+			{
+				hashed: true,
+				language: ["en", "zh"],
+				docsRouteBasePath: "/",
+				indexBlog: false,
+				docsDir: "/",
+			},
+		],
+	],
 };
