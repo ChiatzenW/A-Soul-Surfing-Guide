@@ -197,6 +197,12 @@ keywords:
 
 请尽量先 fork， 在本地处理完成后，提交 PR 到仓库。
 
+:::caution
+
+提交 commit 之前先运行测试，确认测试成功后再提交 commit，这是一个好习惯。
+
+:::
+
 ### 依赖安装
 
 首先需要安装好 nodejs， npm， yarn。
