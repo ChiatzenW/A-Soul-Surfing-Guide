@@ -375,6 +375,52 @@ apk add python3 build-base
 ```
 
 不需要再拉取仓库所以不用下载 git 了。
+
+---
+
+如果你觉得每次 build 特别慢的话，我们有已经
+[构建好缓存的镜像](https://hub.docker.com/r/avimitin/asoul-guide-build-env)
+提供使用。
+
+使用方法和如上描述类似，只是你不能挂载 `node_modules` 进入镜像，否则会
+编译失败。
+
+### Docker-Compose
+
+为了让网页检查更加简单，我们也提供了 
+[docker-compose 配置文件](https://github.com/A-Soul-Guide/A-Soul-Surfing-Guide/blob/master/docker-compose.yml)。
+
+你需要安装 [docker-compose](https://docs.docker.com/compose/install/)。然后
+在项目路径下执行命令：
+
+```console
+docker-compose up
+```
+
+就会自动的下载好依赖，进入目录，并且编译静态文件，启动服务器了。等待编译
+结束，访问 `http://localhost:3000` 即可。
+
+#### 自定义
+
+因为镜像并不会随时更新，如果有遇到 node 版本与镜像不匹配的情况，你可以修改
+`docker-compose.yml` 来进行本地编译。
+
+首先删除下面这行
+
+```diff
+- image: avimitin/asoul-guide-build-env:latest
+```
+
+然后在这一行同样的位置，补充上
+
+```diff
++ build: ./
+```
+
+然后执行 `docker-compose build --no-cache` 来运行编译任务。
+
+编译结束后继续使用 `docker-compose up` 即可。
+
 </TabItem>
 </Tabs>
 </TabItem>
