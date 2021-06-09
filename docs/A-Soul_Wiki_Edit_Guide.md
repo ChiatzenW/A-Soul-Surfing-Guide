@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
     {label: '我想写新条目！', value: 'entry'},
     {label: '我想维护网页！', value: 'pages'},
   ]}>
-  <TabItem value="entry">
+<TabItem value="entry">
 
 ## 内容维护
 
@@ -44,10 +44,11 @@ import TabItem from '@theme/TabItem';
 如对 Markdown 语法不熟悉，可以查看这篇文章： 
 [Markdown语法教程](https://markdown.com.cn/intro.html#markdown-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
 
-Markdown 编辑器非常自由，你可以任意选取，但是本人推荐使用 VSCode 加上预览插件，
-可以方便的进行版本管理，也可以对自己如何实现的文本格式有清晰的了解。
+Markdown 编辑器如何选择我们没有限制，你可以任意选取，如果你是第一次使用你可以尝试 
+[typora](https://typora.io)。 但是本人推荐使用 VSCode 加上预览插件，
+可以方便的进行版本管理，也可以对文本样式的实现有清晰的了解。
 
-2. 请使用如下格式进行百科内容编辑
+2. 请使用如下格式进行百科内容编辑(请注意换行是两次回车)
 
 ```markdown
 # 梗名字 （比如“含金量”）
@@ -198,27 +199,54 @@ keywords:
 ## 来源
 正文...
 ```
+
+### 提交修改
+
+修改完之后你需要使用 git 把修改存好并提交到你自己的仓库，然后在 GitHub 
+发起 Pull Request 请求，我们会尽快检查你的文字并合并到网站中。
+
+```console
+git add ./docs/口水黄豆.md
+git commit -m "更新： 新增口水黄豆条目"
+git push origin master
+```
 </TabItem>
 <TabItem value="pages">
 
 ## 页面维护
 
-请尽量先 fork， 在本地处理完成后，提交 PR 到仓库。
-
 :::caution
 
-提交 commit 之前先运行测试，确认测试成功后再提交 commit，这是一个好习惯。
+请尽量先 fork， 在本地处理完成后，提交 PR 到仓库。
 
 :::
 
-### 依赖安装
+:::tip
+
+提交 commit 之前先运行测试，确认测试成功后再提交 commit，这是一个好习惯。
+这样就不用反复提交再修复。
+
+:::
+
+你可以选择 [本地构建](#本地构建)，或者使用 [docker](#docker-构建) 构建：
+
+<Tabs
+  defaultValue="local"
+  values={[
+    {label: '本地构建', value: 'local'},
+    {label: 'Docker', value: 'docker'},
+  ]}>
+
+<TabItem value="local">
+
+### 本地构建
 
 首先需要安装好 nodejs， npm， yarn。
 [点击到 Node.js 下载页](https://nodejs.org/en/download/)。
 
 > 也可以使用 docker 进行维护，使用命令： 
 > `docker run --name asoul-wiki-page -it -p 3000:3000 node:alpine ash`
-> 进入 docker 构建。
+> 进入 docker 构建。。
 
 使用 [git](https://git-scm.com/book/zh/v2) 拉取仓库之后，执行命令下载依赖：
 
@@ -234,7 +262,7 @@ npx docusaurus --version
 
 如果正确安装应该会有版本号显示。
 
-### 如何预览
+#### 如何预览
 
 ```bash
 npx docusaurus start
@@ -246,7 +274,7 @@ npx docusaurus start
 npx docusaurus start --port 11451 --host 0.0.0.0
 ```
 
-### 如何生成静态页面
+#### 如何生成静态页面
 
 ```bash
 npx docusaurus build
@@ -259,6 +287,142 @@ npm run serve
 ```
 
 静态页面会生成在 `site` 文件夹里。
+</TabItem>
+<TabItem value="docker">
+
+### Docker 构建
+
+:::note
+
+此处使用的是 node:alpine 镜像，在本文撰写时详细版本号为 node:16.3-alpine。
+
+:::
+
+如果想要快速测试及构建，你可以尝试使用 [docker](https://docker.com)。
+
+根据官网的指引下载安装好 docker 之后， 使用下面的命令拉取 node 镜像：
+
+```console
+docker pull node:alpine
+```
+
+然后运行 node 镜像：
+
+```console
+docker run --name asoul-guide-book -it -p 3000:3000 node:alpine ash
+```
+
+> 命令解释： 
+> 
+> - `docker`: 运行 docker 的 cli 软件
+> - `run`: 传递 run 参数，让 docker 的 cli 启动镜像
+> - `--name asoul-guide-book` : 给当前我们运行的这个实例命名为 `asoul-guide-book`
+> - `-it`: 让这个镜像给我们提供一个可以交互的终端
+> - `-p 3000:3000`： 把我们宿主机的 3000 端口绑定到内部的 3000 端口，你可以想象
+一条隧道，当我们访问本地 3000 端口时，会通过这条管道把数据传输到镜像里面的 3000
+端口。
+> - `node:alpine`： 我们要用到的镜像
+> - `ash`： 启动镜像时打开 `ash` 这个程序。`ash` 是一个终端程序，通过他才能进行
+下面的其他操作。
+
+进入 docker 之后，如果没有错误，你应该会看到下面这样的提示符：
+
+```console
+/#
+```
+
+然后输入命令：
+
+```console
+apk add git python3 build-base
+```
+
+等东西安装好之后，使用 git 把我们的仓库源码拉取下来并进入文件夹：
+
+```console
+git clone https://github.com/A-Soul-Guide/A-Soul-Surfing-Guide
+
+cd A-Soul-Surfing-Guide
+```
+
+然后我们安装 Node.js 依赖：
+
+```console
+npm install
+```
+
+安装好之后就可以继续像上述的 [本地构建](#本地构建) 章节中继续构建操作了。
+
+如果你想操作本地的目录的话，在启动镜像时加入一个新的参数：
+
+```console
+docker run \
+    --name asoul-guide-book \
+    -it \ 
+    -p 3000:3000 \ 
+    -v $PWD:/data \ 
+    node:alpine ash
+```
+
+这里的 $PWD 可以获取你的当前所在目录，你也可以自己写进去，但是
+必须是绝对路径。docker 会把冒号左边的路径挂在到镜像里的 /data
+文件夹里，你对 /data 的操作也会同步到宿主机的文件夹里。
+
+然后运行：
+
+```
+apk add python3 build-base
+```
+
+不需要再拉取仓库所以不用下载 git 了。
+
+---
+
+如果你觉得每次 build 特别慢的话，我们有已经
+[构建好缓存的镜像](https://hub.docker.com/r/avimitin/asoul-guide-build-env)
+提供使用。
+
+使用方法和如上描述类似，只是你不能挂载 `node_modules` 进入镜像，否则会
+编译失败。
+
+### Docker-Compose
+
+为了让网页检查更加简单，我们也提供了 
+[docker-compose 配置文件](https://github.com/A-Soul-Guide/A-Soul-Surfing-Guide/blob/master/docker-compose.yml)。
+
+你需要安装 [docker-compose](https://docs.docker.com/compose/install/)。然后
+在项目路径下执行命令：
+
+```console
+docker-compose up
+```
+
+就会自动的下载好依赖，进入目录，并且编译静态文件，启动服务器了。等待编译
+结束，访问 `http://localhost:3000` 即可。
+
+#### 自定义
+
+因为镜像并不会随时更新，如果有遇到 node 版本与镜像不匹配的情况，你可以修改
+`docker-compose.yml` 来进行本地编译。
+
+首先删除下面这行
+
+```diff
+- image: avimitin/asoul-guide-build-env:latest
+```
+
+然后在这一行同样的位置，补充上
+
+```diff
++ build: ./
+```
+
+然后执行 `docker-compose build --no-cache` 来运行编译任务。
+
+编译结束后继续使用 `docker-compose up` 即可。
+
+</TabItem>
+</Tabs>
 </TabItem>
 </Tabs>
 
