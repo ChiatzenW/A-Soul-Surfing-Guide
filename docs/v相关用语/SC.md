@@ -1,8 +1,7 @@
 ---
 Author: Sakifore
 LastEditAt: '2021-06-09 23:01:15'
-title:
-tags:
+title: SC
 ---
 # SC
 

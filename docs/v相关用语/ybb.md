@@ -1,8 +1,7 @@
 ---
 Author: Sakifore
 LastEditAt: '2021-06-09 23:01:21'
-title:
-tags:
+title: ybb
 ---
 # ybb
 

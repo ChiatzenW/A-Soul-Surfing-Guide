@@ -1,8 +1,9 @@
 ---
 Author: Sakifore
 LastEditAt: '2021-06-09 23:01:04'
-title:
+title: mmr
 tags:
+	- mmr
 ---
 # mmr
 
