@@ -57,4 +57,4 @@ git push origin master
 
 ## 许可声明
 
-该仓库遵循 [MIT LICENSE](./LICENSE.txt)
+该仓库遵循 [CC-BY-SA-4.0](./LICENSE.txt)
