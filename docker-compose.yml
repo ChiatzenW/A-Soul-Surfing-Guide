@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  build_env:
+    container_name: 'asoul-guide-build-env'
+    build: ./
+    hostname: 'asoul-guide-host'
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
