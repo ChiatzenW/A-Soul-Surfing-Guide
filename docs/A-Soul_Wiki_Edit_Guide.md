@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
     {label: '我想写新条目！', value: 'entry'},
     {label: '我想维护网页！', value: 'pages'},
   ]}>
-  <TabItem value="entry">
+<TabItem value="entry">
 
 ## 内容维护
 
@@ -230,6 +230,15 @@ git push origin master
 
 你可以选择 [本地构建](#本地构建)，或者使用 [docker](#docker-构建) 构建：
 
+<Tabs
+  defaultValue="local"
+  values={[
+    {label: '本地构建', value: 'local'},
+    {label: 'Docker', value: 'docker'},
+  ]}>
+
+<TabItem value="local">
+
 ### 本地构建
 
 首先需要安装好 nodejs， npm， yarn。
@@ -278,6 +287,8 @@ npm run serve
 ```
 
 静态页面会生成在 `site` 文件夹里。
+</TabItem>
+<TabItem value="docker">
 
 ### Docker 构建
 
@@ -364,7 +375,8 @@ apk add python3 build-base
 ```
 
 不需要再拉取仓库所以不用下载 git 了。
-
+</TabItem>
+</Tabs>
 </TabItem>
 </Tabs>
 
