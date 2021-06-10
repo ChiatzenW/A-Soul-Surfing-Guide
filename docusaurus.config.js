@@ -82,6 +82,8 @@ module.exports = {
 					sidebarPath: require.resolve("./sidebars.js"),
 					path: "./docs",
 					routeBasePath: "/",
+					showLastUpdateAuthor: true,
+					showLastUpdateTime: true,
 				},
 				blog: false,
 				theme: {
