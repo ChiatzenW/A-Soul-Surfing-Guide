@@ -1,6 +1,7 @@
 ---
 Author: Sakifore
 LastEditAt: '2021-06-09 23:00:13'
+title: 才XY我还以为YX呢
 ---
 # 才XY我还以为YX呢
 

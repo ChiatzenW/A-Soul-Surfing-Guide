@@ -1,0 +1,6 @@
+{
+    "fileheadergit.tpl": "---\nAuthor: {author}\nDate: {createTime}\ntitle: ---",
+    "fileheader.tpl": "---\\nAuthor: {author}\\nDate: {createTime}\\ntitle: \\n---\\n# \\n\\n## 变体\\n\\n## 来源\\n\\n## 语义\\n\\n## 应用\\n\\n",
+    "fileheader.Author": "Sakifore",
+    "fileheader.LastModifiedBy": "Sakifore"
+}
