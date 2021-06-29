@@ -6,13 +6,74 @@ sidebar_position: 99
 为了防止指南被严重破坏，以及帮助对静态页面没有编辑经验的新成员，我制定了
 这一份 _A-Soul 上网冲浪指北_ 来规范指南的编辑。
 
+## 如果你只想提交内容...
+
+因为网站编辑需要的门槛较高，如果你只是想写新条目，我们现在提供下述方法：
+
+你可以点击 GitHub 上方 issues 页面，点击右边的 New issues 绿色按钮。在弹出的新菜单
+中，选择新条目选项，你会看到一个页面编辑框，请在标题的 “【新条目】”
+后方空一格，填写你要补充的内容名字。
+
+然后请不要删除 `****` 里面的内容，你只需要修改每个小标题底下的解释文字就可以了。
+
+例如：
+
+```text
+**语义**（这里不要碰）
+
+这个梗是什么意思......（你只需要删除这行解释文字就行，然后加上自己的内容）
+```
+
+最后点击右下角的 `Submit new issues` 按钮提交即可，我们会在有空的时候增加内容。
+
 ## 在你贡献之前...
 
 由于我们的内容审核和版本管理依赖 [git](https://git-scm.com/book/zh/v2), 
-如果你对我们的指南编辑有兴趣，不论你是想编辑内容还是维护网站，你都
+如果你想对我们仓库直接修改，不论你是想编辑内容还是维护网站，你都
 需要了解 [git](https://git-scm.com/book/zh/v2) 和
 [GitHub Pull Request](https://docs.github.com/cn/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 的使用方法。
+
+修改前依照如下步骤进行贡献：
+
+1. `fork` 仓库
+
+点击右上角的 `fork` 按钮将该仓库 fork 到你的账户下。
+
+2. 拉取仓库到本地并编辑
+
+拉取仓库:
+
+```bash
+git clone https://github.com/{{你的用户名}}/ASoul-Surfing-Guide
+```
+
+新建分支：
+
+```bash
+git checkout -b {{NEW_CHANGE}}
+
+# 例子
+git checkout -b new-artical
+```
+
+然后再对文件进行编辑， 编辑时请同时请**注意**几点：
+
+- 请不要编辑 `README.md`。
+- 如果你是内容编辑人员，请在 `./docs` 文件夹内工作，不要编辑其他文件
+- 如果有必要编辑网站的设置，请先发起 issues 进行讨论。
+- 请不要编辑 `LICENSE.txt`
+
+3. 提交
+
+```bash
+git add . && git commit -m "你做了什么修改"
+git push origin master
+```
+
+4. 提交 PR
+
+点击 Pull Request, 将分支提交到这个仓库。
 
 ## 你想做什么
 
