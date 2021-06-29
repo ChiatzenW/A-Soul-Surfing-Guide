@@ -14,47 +14,6 @@ A-Soul 评论区冲浪指南是一个对 A-Soul 相关梗解释的手册。
 请先阅读 [A-Soul 评论区冲浪指北](https://wiki.asoul.org/A-Soul_Wiki_Edit_Guide)
 了解编辑要求和编辑依赖。
 
-对要求有所了解后，可以依照如下步骤进行贡献：
-
-1. `fork` 仓库
-
-点击右上角的 `fork` 按钮将该仓库 fork 到你的账户下。
-
-2. 拉取仓库到本地并编辑
-
-拉取仓库:
-
-```bash
-git clone https://github.com/{{你的用户名}}/ASoul-Surfing-Guide
-```
-
-新建分支：
-
-```bash
-git checkout -b {{NEW_CHANGE}}
-
-# 例子
-git checkout -b new-artical
-```
-
-然后再对文件进行编辑， 编辑时请同时请**注意**几点：
-
-- 请不要编辑 `README.md`。
-- 如果你是内容编辑人员，请在 `./docs` 文件夹内工作，不要编辑其他文件
-- 如果有必要编辑网站的设置，请先发起 issues 进行讨论。
-- 请不要编辑 `LICENSE.txt`
-
-3. 提交
-
-```bash
-git add . && git commit -m "你做了什么修改"
-git push origin master
-```
-
-4. 提交 PR
-
-点击 Pull Request, 将分支提交到这个仓库。
-
 ## 许可声明
 
 该仓库遵循 [CC-BY-SA-4.0](./LICENSE.txt)
