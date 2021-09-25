@@ -14,6 +14,10 @@ A-Soul 评论区冲浪指南是一个对 A-Soul 相关梗解释的手册。
 请先阅读 [A-Soul 评论区冲浪指北](https://wiki.asoul.org/A-Soul_Wiki_Edit_Guide)
 了解编辑要求和编辑依赖。
 
+## 注意事项
+
+- 请不要在文档内附上任何群组的链接，避免宣传小团体。
+
 ## 许可声明
 
 该仓库遵循 [CC-BY-SA-4.0](./LICENSE.txt)
