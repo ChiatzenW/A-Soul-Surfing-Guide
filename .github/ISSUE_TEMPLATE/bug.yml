@@ -1,0 +1,33 @@
+name: 错误修正
+description: 创建一个新的错误报告来帮助我们修改
+title: "【错误报告】"
+labels: [bug, documentation]
+body:
+  - type: textarea
+    id: desc
+    attributes:
+      label: 描述错误
+      description: 清晰明了的描述文档的错误。
+    validations:
+      required: true
+  - type: textarea
+    id: loc
+    attributes:
+      label: 错误位置
+      description: 请告诉我们错误在哪个位置。
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 正确的文本
+      description: 请告诉我们正确的文本应该是什么。
+    validations:
+      required: false
+  - type: textarea
+    id: comment
+    attributes:
+      label: 附注
+      description: 关于这个错误还有什么别的备注的。
+    validations:
+      required: false

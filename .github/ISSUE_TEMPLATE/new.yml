@@ -1,0 +1,40 @@
+name: 新条目
+description: 贡献新条目
+title: "【新条目】"
+labels: [documentation, enhancement]
+body:
+  - type: textarea
+    id: name
+    attributes:
+      label: 梗名字
+      description: 你想要解释的梗的名字。比如：“嘉然小姐的狗”。
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 来源
+      description: 梗的来源，可以是视频链接地址，或者用自己的文字解释渊源。
+    validations:
+      required: true
+  - type: textarea
+    id: variant
+    attributes:
+      label: 变体
+      description: 梗的一些变体用法，比如 “嘉然小姐的陆战功能犬”。
+    validations:
+      required: false
+  - type: textarea
+    id: semantic
+    attributes:
+      label: 语义
+      description: 这个梗是什么意思，是贬义还是褒义，应当在什么场合用。
+    validations:
+      required: true
+  - type: textarea
+    id: usage
+    attributes:
+      label: 应用
+      description: 梗的使用范例，比如可以复制粘贴小作文在这里。
+    validations:
+      required: false
