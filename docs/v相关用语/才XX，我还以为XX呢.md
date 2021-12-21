@@ -1,6 +1,6 @@
 ---
 Author: Sakifore
-LastEditAt: '2021-06-09 23:00:13'
+LastEditAt: '2021-12-21 22:03:13'
 title: 才XY我还以为YX呢
 ---
 # 才XY我还以为YX呢
@@ -30,4 +30,4 @@ title: 才XY我还以为YX呢
 
 ## 应用
 
-“我一直都是mmr啊😃😃😃”
+“才纯享五分钟啊，我还以为五十分钟呢”
